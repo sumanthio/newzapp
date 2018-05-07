@@ -18,6 +18,7 @@ export class NewsListPage {
   }
 
   ionViewDidLoad() {
+    // make the call to https://newsapi.org/v2/top-headlines?sources=bbc-news
     console.log('ionViewDidLoad NewsListPage');
   }
 

@@ -1,3 +1,15 @@
 page-home {
+}
 
+.slide {
+  background: #f53d3d;
+  color: #fff;
+}
+
+.slide:first-child {
+  display: inline;
+}
+
+.slide:first-child img {
+  filter: brightness(50%);
 }
