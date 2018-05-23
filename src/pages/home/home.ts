@@ -17,7 +17,6 @@ export class HomePage {
   next() {
     console.log("Yasss");
     this.navCtrl.push(NewsProviderListPage);
-
   }
 
 }
