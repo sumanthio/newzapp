@@ -29,8 +29,10 @@ export class NewsProviderListPage {
       })
   }
 
-  goToArticles() {
-    this.navCtrl.push(NewsListPage);
+  goToArticles(name) {
+    this.navCtrl.push(NewsListPage, {
+      name
+    });
   }
 
 }

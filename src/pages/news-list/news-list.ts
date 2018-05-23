@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
+import {NewsArticlePage} from "../news-article/news-article";
 
 /**
  * Generated class for the NewsListPage page.
@@ -14,12 +15,23 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class NewsListPage {
 
+  public articles: any [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
     // make the call to https://newsapi.org/v2/top-headlines?sources=bbc-news
-    console.log('ionViewDidLoad NewsListPage');
+    fetch(`https://newsapi.org/v2/top-headlines?sources=${this.navParams.get('name')}&apiKey=a8aea7d76f7d46bab28420df3be23ddc`)
+      .then((response) => response.json())
+      .then((data) => {
+        this.articles = data.articles;
+      })
+  }
+
+  goToArticle() {
+   this.navCtrl.push(NewsArticlePage)
   }
 
 }

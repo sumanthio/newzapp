@@ -7,12 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>NewsList</ion-title>
+    <ion-title>Articles</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let article of articles" (click)="goToArticle()">
+    <img src="{{article.urlToImage}}" alt="article.source.name">
+    <ion-card-title>
+      {{article.title}}
+    </ion-card-title>
+    <ion-card-content>
+      {{article.description}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
