@@ -9,6 +9,7 @@ import {NewsProviderListPage} from "../news-provider-list/news-provider-list";
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
+
   }
 
   next() {
