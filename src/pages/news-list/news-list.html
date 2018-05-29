@@ -14,8 +14,8 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let article of articles" (click)="goToArticle()">
-    <img src="{{article.urlToImage}}" alt="article.source.name">
+  <ion-card *ngFor="let article of articles" (click)="goToArticle(article)">
+    <img *ngIf="article.urlToImage !== null" src="{{article.urlToImage}}" alt="{{article.source.name}}">
     <ion-card-title>
       {{article.title}}
     </ion-card-title>

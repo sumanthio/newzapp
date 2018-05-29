@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
-import {NewsProvider} from "../../providers/news/news";
 
 /**
  * Generated class for the NewsArticlePage page.
@@ -14,12 +13,14 @@ import {NewsProvider} from "../../providers/news/news";
   templateUrl: 'news-article.html',
 })
 export class NewsArticlePage {
+  public article: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private newsService: NewsProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.article = this.navParams.data
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsArticlePage', this.newsService.getCurrentArticle());
+    console.log('ionViewDidLoad NewsArticlePage', this.navParams.data);
   }
 
 }

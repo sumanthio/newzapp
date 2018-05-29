@@ -7,12 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>NewsArticle</ion-title>
+    <ion-title>{{article.author}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+    <img src="{{article.urlToImage}}"/>
+    <div class="card-title">{{article.title}}</div>
+    <div class="card-subtitle">{{article.description}}</div>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>{{article.publishedAt}}</ion-col>
+      <ion-col col-4>{{article.source.name}}</ion-col>
+      <ion-col col-4>{{article.author}}</ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {ModalController, NavController, NavParams} from 'ionic-angular';
 import {NewsArticlePage} from "../news-article/news-article";
 
 /**
@@ -17,7 +17,7 @@ export class NewsListPage {
 
   public articles: any [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
 
   }
 
@@ -30,8 +30,9 @@ export class NewsListPage {
       })
   }
 
-  goToArticle() {
-   this.navCtrl.push(NewsArticlePage)
+  goToArticle(article) {
+    let articleModal = this.modalCtrl.create(NewsArticlePage, article);
+    articleModal.present();
   }
 
 }
