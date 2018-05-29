@@ -11,7 +11,6 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {NewsListPage} from "../pages/news-list/news-list";
 import {NewsArticlePage} from "../pages/news-article/news-article";
-import { NewsProvider } from '../providers/news/news';
 
 @NgModule({
   declarations: [
@@ -38,8 +37,7 @@ import { NewsProvider } from '../providers/news/news';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NewsProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {
