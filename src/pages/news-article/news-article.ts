@@ -20,7 +20,6 @@ export class NewsArticlePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsArticlePage', this.navParams.data);
   }
 
 }
