@@ -1,9 +1,13 @@
 page-home {
 }
 
-.slide {
+.slide, .header  {
   background: #f53d3d;
   color: #fff;
+}
+
+page-home .scroll-content {
+  background: #f53d3d;
 }
 
 .slide:first-child {

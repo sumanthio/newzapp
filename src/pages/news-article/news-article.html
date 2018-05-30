@@ -13,16 +13,18 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-card>
     <img src="{{article.urlToImage}}"/>
-    <div class="card-title">{{article.title}}</div>
-    <div class="card-subtitle">{{article.description}}</div>
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <p>{{article.description}}</p>
+    </ion-card-content>
   </ion-card>
 
   <ion-grid>
     <ion-row>
-      <ion-col col-4>{{article.publishedAt}}</ion-col>
+      <ion-col col-4>{{article.publishedAt | date}}</ion-col>
       <ion-col col-4>{{article.source.name}}</ion-col>
       <ion-col col-4>{{article.author}}</ion-col>
     </ion-row>
